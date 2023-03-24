@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="barre.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Barre de recherche</title>
+</head>
+
+<body>
+    <nav>
+        <div class="inner">
+            <input class="search_box" type=search placeholder="Search...">
+            <div class="search">
+                <i class="fa fa-search"></i>
+            </div>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Topos</a></li>
+                <li><a href="#">Boîtes à outils</a></li>
+                <li><a href="#">Le projet</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        // Search Toggle //
+        $(".search").click(function () {
+            $("ul").toggleClass("active");
+            $(".search_box").toggleClass("search_box_active");
+        });
+    </script>
+</body>
+
+</html>
