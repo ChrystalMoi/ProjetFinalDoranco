@@ -18,7 +18,6 @@ body {
 .dropdown-item:hover {
     color: #9d1fba;
 }
-
 /*- - - - - - - - - -*/
 
 /*Image header*/
@@ -35,7 +34,7 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-image: url('/img/Bannière1.jpg');
+    background-image: url('./img/Bannière1.jpg');
 }
 
 .banner-overlay {
