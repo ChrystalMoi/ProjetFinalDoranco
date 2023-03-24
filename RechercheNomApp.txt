@@ -1,5 +1,3 @@
-Choix 3 - La Voie
-
 7	-	Escaladeau 			= Escalade 			+ H]au[t
 5	-	MonAscenssion 		= Escension d'escalade
 2	-	EscAventura 			= Esc[alade] 		+ Aventure
