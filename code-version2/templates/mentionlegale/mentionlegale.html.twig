@@ -1,0 +1,84 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Mentions Légales{% endblock %}
+
+{% block titlePage %}Mentions Légales{% endblock %}
+
+{% block body %}
+<section class="corps_mentionlegale">
+    <h3>1. Éditeur du site</h3>
+    <p><U>Nom de l'étudiant :</U> BASTID Chrystal<br>
+        <U>E-mail </U>: <a href="mailto:contact@lavoie-escalade.fr">contact@lavoie-escalade.fr</a>
+    </p>
+
+    <h3>2. Hébergement</h3>
+    <p><U>Nom de l'hébergeur :</U> IONOS SARL<br>
+        <U> Adresse :</U> 7 place de la Gare - BP 70109 - 57200 Sarreguemines Cedex - France<br>
+        <U>Téléphone :</U> 09 70 80 89 11<br>
+        <U>E-mail :</U> <a href="mailto:info@ionos.fr">info@ionos.fr</a>
+    </p>
+
+    <h3>3. Propriété intellectuelle</h3>
+    <p>Le contenu de ce site web (textes, images, vidéos, etc.) est protégé par les lois sur la propriété
+        intellectuelle.
+        Toute reproduction, représentation, modification, distribution ou exploitation de tout ou partie du contenu sans
+        autorisation préalable écrite est strictement interdite.</p>
+
+    <h3>4. Utilisation des cookies et collecte des données personnelles</h3>
+    <p>Notre site web utilise des cookies, y compris des cookies PHPSESSID, pour améliorer la fonctionnalité de notre
+        site, personnaliser votre expérience de navigation et collecter certaines données personnelles, telles que votre
+        adresse e-mail, votre nom et votre prénom. Ces cookies nous aident à améliorer nos services et à vous offrir une
+        expérience utilisateur plus fluide.</p>
+
+    <h3>5. Confidentialité et protection des données personnelles</h3>
+    <p>Dans le cadre de l'utilisation de notre application web, nous respectons votre vie privée et nous nous engageons
+        à protéger vos données personnelles. Nous utilisons des cookies PHPSESSID pour améliorer votre expérience
+        utilisateur, mais également pour collecter et traiter de manière sécurisée des données telles que votre adresse
+        e-mail, votre nom et votre prénom. Nous traitons ces données conformément à notre politique de confidentialité
+        et nous veillons à prendre les mesures appropriées pour garantir leur sécurité.</p>
+
+    <h3>6. Limitation de responsabilité</h3>
+    <p>Nous nous efforçons de fournir des informations précises et à jour sur notre site web, mais nous ne pouvons pas
+        garantir l'exactitude, l'exhaustivité ou la pertinence des informations fournies. En conséquence, nous déclinons
+        toute responsabilité en cas de dommages directs ou indirects résultant de l'utilisation du site web ou de son
+        contenu.</p>
+
+    <h3>7. Sources externe</h3>
+    <h5>Page <a href="{{asset('boiteaoutils/passeport')}}">passeports</a></h5>
+    <ul>
+        <li>
+            <img class="image_ml" src="{{asset('image/passeports/bloc.png')}}">
+            <a href="https://www.flaticon.com/fr/icones-gratuites/roche" title="roche icônes">
+                Roche icônes créées par Nadiinko - Flaticon
+            </a>
+        </li>
+        <li>
+            <img class="image_ml" src="{{asset('image/passeports/diff.png')}}">
+            <a href="https://www.flaticon.com/fr/icones-gratuites/harnais-de-securite"
+                title="harnais de sécurité icônes">
+                Harnais de sécurité icônes créées par Freepik - Flaticon
+            </a>
+        </li>
+        <li>
+            <img class="image_ml" src="{{asset('image/passeports/ecoResponsable.png')}}">
+            <a href="https://www.flaticon.com/free-icons/plant" title="plant icons">
+                Plant icons created by Pixel perfect - Flaticon
+            </a>
+        </li>
+        <li>
+            <img class="image_ml" src="{{asset('image/passeports/vitesse.png')}}">
+            <a href="https://www.flaticon.com/fr/icones-gratuites/rapide" title="rapide icônes">Rapide icônes créées par
+                Freepik - Flaticon</a>
+        </li>
+    </ul>
+
+    <h5>Page <a href="{{asset('boiteaoutils/epi')}}">e.p.i.</a></h5>
+    <ul>
+        <li><a href="https://www.sportsdenature.gouv.fr/data/userfiles/fiches-activites/Escalade/EPI-Escalade.pdf">Fiche
+                relative aux epi d'escalade</a></li>
+    </ul>
+
+    <p style="text-align: right; font-style: italic;">Dernière mise à jour : 14/07/2023 11:07</p>
+
+</section>
+{% endblock %}

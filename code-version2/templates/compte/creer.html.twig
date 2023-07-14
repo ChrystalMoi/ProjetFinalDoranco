@@ -1,0 +1,73 @@
+<!--Formulaire de création de compte-->
+<form class="text-center col-10 mb-3">
+    <div class="card-body">
+        <h2 class="card-title">Créer un compte</h2>
+        <div class="d-flex mt-2 mb-1 flex-column justify-content-center align-items-center">
+            <div class="col-10">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">@</span>
+                    <div class="form-floating col-8">
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        <label for="email">Adresse email <strong style="color: red">*</strong></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                        </svg>
+                    </span>
+                    <div class="form-floating col-8">
+                        <input type="text" class="form-control" id="prenom" placeholder="Francis">
+                        <label for="prenom">Prenom</label>
+                    </div>
+                    <div class="form-floating col-8">
+                        <input type="text" class="form-control" id="nom" placeholder="Toto">
+                        <label for="nom">Nom</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+                        </svg>
+                    </span>
+                    <div class="form-floating col-8">
+                        <input type="password" class="form-control" id="pwd" placeholder="Mot de passe">
+                        <label for="pwd">Mot de passe <strong style="color: red">*</strong></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="input-group mb-1">
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-lock-fill" viewBox="0 0 16 16">
+                            <path
+                                    d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                        </svg>
+                    </span>
+                    <div class="form-floating col-8">
+                        <input type="password" class="form-control" id="pwd2" placeholder="Confirmation du mot de passe">
+                        <label for="pwd2">Confirmation du mot de passe <strong style="color: red">*</strong></label>
+                    </div>
+                </div>
+            </div>
+            <div class="text-start col-10 mb-2">
+                <small style="color: red">
+                    <strong>*</strong> Champs requis
+                </small>
+            </div>
+            <div class="alert alert-danger mt-2 mb-2 col-10" id="errorMessage" role="alert" style="display: none">
+                Une erreur est survenue !
+            </div>
+            <button type="submit" class="btn btn-primary col-10 mt-2" id="btn-creer-compte">Créer un compte</button>
+            <hr class="col-10">
+            <button type="button" class="btn btn-outline-dark col-10" id="btn-form-connexion">Se connecter</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,57 @@
+{% for message in app.flashes('success-maj-compte') %}
+    <div class="alert alert-success d-flex align-items-center mb-2 col-10" role="alert" id="successMessage">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+        </svg>
+        <div>
+            {{ message }}
+        </div>
+    </div>
+{% endfor %}
+
+<div class="col-10">
+    <div class="input-group mb-2">
+        <span class="input-group-text">@</span>
+        <div class="form-floating col-8">
+            <input type="email" class="form-control" id="email" value="{{user.email|escape}}" disabled readonly>
+            <label for="email">Adresse email</label>
+        </div>
+    </div>
+</div>
+
+<div class="col-10">
+    <div class="input-group mb-2">
+        <span class="input-group-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+            </svg>
+        </span>
+        <div class="form-floating col-8">
+            <input type="text" class="form-control" id="prenom" value="{{user.prenom|escape}}" disabled readonly>
+            <label for="prenom">Prenom</label>
+        </div>
+        <div class="form-floating col-8">
+            <input type="text" class="form-control" id="nom" value="{{user.nom|escape}}" disabled readonly>
+            <label for="nom">Nom</label>
+        </div>
+    </div>
+</div>
+
+<div class="col-10">
+    <div class="input-group mb-2">
+        <span class="input-group-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+            </svg>
+        </span>
+        <div class="form-floating col-8">
+            <input type="password" class="form-control" id="pwd" value="***********" readonly disabled>
+            <label for="pwd">Mot de passe</label>
+        </div>
+    </div>
+</div>
+
+<div class="mt-2 col-10 row flex-md-row-reverse justify-content-evenly gy-2">
+    <button class="btn btn-primary col-md-4 align-self-center" id="btn-form-maj-compte">Modifier mes informations</button>
+    <a href="/logout" class="btn btn-danger col-md-4 align-self-center">Se déconnecter</a>
+</div>

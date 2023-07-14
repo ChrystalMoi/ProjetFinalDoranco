@@ -1,0 +1,60 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block titlePage %}Contact{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset(css_path) }}">
+{% endblock %}
+
+{% block body %}
+<section class="corps_contact">
+    {% for message in app.flashes('success-contact') %}
+        <div class="alert alert-success">Merci pour votre avis ! 
+            Vous pouvez consulter tous vos avis dans la page <a class="alert-link" href="/mon-compte">Mon Compte</a>
+        </div>        
+    {% endfor %}
+
+    {% if app.session.get('email') %}
+
+    <h3>Contactez moi via le formulaire :</h3>
+
+    {% for message in app.flashes('error-contact') %}
+        <div class="alert alert-danger">
+            {{message}}
+        </div>        
+    {% endfor %}
+
+    <form method="post">        
+        <div class="form-group mb-2">
+            <label for="inputObjet">Objet</label>
+            <input type="text" placeholder="Il manque une information" class="form-control" id="inputObjet" name="objet"
+                maxlength="225">
+        </div>
+        <div class="form-group mb-2">
+            <label for="inputMessage">Message</label>
+            <textarea class="form-control"
+                placeholder="Bonjour, j'ai remarqué qu'il manquait une information essentiel sur la page des noeuds. En effet, ..."
+                id="inputMessage" name="message" rows="3" maxlength="225"></textarea>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </div>
+    </form>
+
+    {% else %}
+    <h3>Contactez moi via le formulaire :</h3>
+
+    <p>
+        Veuillez-vous connecter pour accéder au formulaire.
+        <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#ModalConnexion"
+                alt="btn connexion inscription">            
+            Connexion/Inscription
+        </button>
+    </p>
+
+    {% endif %}
+</section>
+{% endblock %}

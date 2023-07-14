@@ -1,0 +1,780 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Passeport{% endblock %}
+
+{% block titlePage %}Passeport{% endblock %}
+
+{% block body %}
+<section class="corps_passeport">
+    <p class="text">Les passeports en escalade sont des programmes d'initiation et de progression proposés par les
+        fédérations nationales d'escalade. Ils permettent aux pratiquants de suivre un parcours de formation en
+        escalade et de
+        valider leur niveau de compétence à chaque étape.</p>
+
+    <div class="accordion accordion-flush" id="accordion-passeport">
+        <!--Blanc-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Le passeport blanc
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion-passeport">
+                <div class="accordion-body">
+                    <div class="img-cotation">
+                        <!--Difficulté--><img src="{{asset('image/passeports/diff.png')}}"> 4b
+                        <!--Bloc--><img src="{{asset('image/passeports/bloc.png')}}"> 3a
+                    </div>
+
+                    <h4 class="text-uppercase passeport-banc">J'apprend à</h4>
+                    <p>
+                        Toujours calme et concentré quand je réalise une manip'
+                        Je grimpe en haut du mur, je redescends en m’amusant et j’invente des blocs difficiles pour
+                        mes partenaires
+                    </p>
+
+                    <h4 class="text-uppercase">Module sécurité blanc</h4>
+
+                    <h6>Adopté une attitude "sécu-compatible"</h6>
+                    <ul>
+                        <li>Rester concentré et vigilant quand je réalise une technique de sécurité</li>
+                        <li>Ne pas distraire un grimpeur réalisant une manoeuvre de sécurité</li>
+                        <li>Communiquer avec mon assureur en utilisant un vocabulaire adapté</li>
+                        <li>Mesurer l’importance de mon rôle d’assureur</li>
+                    </ul>
+
+                    <h6>Me préparer à grimper</h6>
+                    <ul>
+                        <li>Mettre correctement mon harnais (ajusté, par-dessus les vêtements)</li>
+                        <li>Passer ma corde aux points d’encordement, tresser le noeud en huit en serrant les
+                            passants et le sécuriser par un noeud d’arrêt</li>
+                        <li>Vérifier mon équipement et mon encordement et les faire vérifier par mon assureur</li>
+                        <li>Attendre le feu vert du moniteur pour grimper</li>
+                        <li>Communiquer avec l’assureur en haut de voie ou en cas de problème</li>
+                    </ul>
+
+                    <h6>Assurer</h6>
+                    <ul>
+                        <li>Installer correctement la corde dans le frein d’assurage, placer ce dernier sur le
+                            pontet et verrouiller le mousqueton de sécurité</li>
+                        <li>Vérifier mon système d’assurage et le faire vérifier par le grimpeur et le moniteur</li>
+                        <li>Me positionner proche de la SAE mais hors de la zone de chute de grimpeurs</li>
+                        <li>Manipuler la corde sans hésitation et de manière à toujours conserver une main derrière
+                            le frein</li>
+                        <li>Assurer la montée du grimpeur en moulinette en conservant la corde tendue, mais sans le
+                            treuiller</li>
+                        <li>Descendre mon partenaire à vitesse modérée</li>
+                        <li>Bloquer le grimpeur à sa demande, en cas de chute et en fin de voie sans être
+                            déséquilibré</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module éco-responsabilité blanc
+                        <img class="img-eco" src="{{asset('image/passeports/ecoResponsable.png')}}">
+                    </h4>
+                    <ul>
+                        <li>Porter une tenue correcte, adaptée à l’escalade</li>
+                        <li>Respecter
+                            <ul>
+                                <li>mon moniteur</li>
+                                <li>l’activité de mes camarades (ne pas les distraire)</li>
+                                <li>les installations et les autres utilisateurs de la salle</li>
+                                <li>les consignes et les règles</li>
+                            </ul>
+                        </li>
+                        <li>Rester attentif pendant les explications</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module difficulté blanc
+                        <img class="img-diff" src="{{asset('image/passeports/diff.png')}}">
+                    </h4>
+                    <h6>Progresser</h6>
+                    <p>Grimper des voies aux profils variés en utilisant des poussées de jambes (et non des
+                        tractions)</p>
+
+                    <h6>Prendre confiance</h6>
+                    <ul>
+                        <li>Me déplacer de plus en plus haut en maîtrisant mon appréhension</li>
+                        <li>M’asseoir dans le baudrier, relâché, après avoir vérifié que l’assureur m’a pris en
+                            charge</li>
+                        <li>Redescendre en moulinette équilibré et relâché</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module bloc blanc
+                        <img class="img-bloc" src="{{asset('image/passeports/bloc.png')}}">
+                    </h4>
+                    <h6>Progresser</h6>
+                    <ul>
+                        <li>Me déplacer dans toutes les directions (montée, oblique, traversée) en utilisant des
+                            solutions variées</li>
+                        <li>Grimper des passages aux profils variés en valorisant les poussées de jambes</li>
+                        <li>Choisir un itinéraire de descente facile et descendre relâché</li>
+                    </ul>
+                    <h6>Me proteger</h6>
+                    <ul>
+                        <li>Dans l’attente de mon tour, ne pas stationner sous les grimpeurs</li>
+                        <li>Ne pas grimper au-dessus d’autres grimpeurs</li>
+                        <li>Vérifier que la surface de réception n’est pas encombrée</li>
+                        <li>Amortir la réception d’un petit saut ou d’une petite chute</li>
+                        <li>Ne pas courir sur les tapis</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Jaune-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Le passeport jaune
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="img-cotation">
+                        <!--Difficulté--><img src="{{asset('image/passeports/diff.png')}}"> 5b
+                        <!--Bloc--><img src="{{asset('image/passeports/bloc.png')}}"> 4a
+                    </div>
+
+                    <h4 class="text-uppercase passeport-jaune">J'apprend à</h4>
+                    <p>
+                        La poubelle, c'est pas pour la déco !
+                    </p>
+                    <p>
+                        Je progresse : je grimpe en tête et j'installe la corde en moulinette.
+                    </p>
+
+                    <h4 class="text-uppercase">Module sécurité jaune</h4>
+
+                    <h6>Me préparer à grimper</h6>
+                    <ul>
+                        <li>Vérifier l’agencement des tapis en pied de voie</li>
+                        <li>Ne jamais laisser ma corde derrière la jambe lorsque je grimpe</li>
+                        <li>Trouver une position confortable pour mousquetonner ma corde</li>
+                        <li>La passer dans toutes les dégaines, dans le bon sens</li>
+                        <li>Placer correctement ma corde dans un système d’assurage de descente libre en haut de
+                            voie - Me réceptionner lors d’une chute de faible hauteur, en moulinette corde molle
+                        </li>
+                    </ul>
+
+                    <h6>Assurer</h6>
+                    <ul>
+                        <li>Préparer correctement la corde pour qu’elle "file" sans noeud et sécuriser le brin libre
+                        </li>
+                        <li>Bien me positionner pour assurer, afin de voir et entendre le grimpeur</li>
+                        <li>Donner de la corde et en reprendre en fonction des actions du grimpeur, sans le gêner
+                        </li>
+                        <li>Arrêter une petite chute</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module éco-responsabilité jaune
+                        <img class="img-eco" src="{{asset('image/passeports/ecoResponsable.png')}}">
+                    </h4>
+                    <h6>La poubelle, c’est pas pour la déco !</h6>
+                    <ul>
+                        <li>Préserver la propreté et l’intégrité de la salle</li>
+                        <li>Éviter tout gaspillage</li>
+                        <li>Prendre soin du matériel confié et le ranger, lover une corde</li>
+                        <li>Entretenir mes chaussons</li>
+                        <li>Respecter les consignes et les règles</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module difficulté jaune
+                        <img class="img-diff" src="{{asset('image/passeports/diffJaune.png')}}">
+                    </h4>
+                    <h6>Progresser</h6>
+                    <ul>
+                        <li>Repérer le cheminement général d’une voie</li>
+                        <li>Utiliser des solutions variées telles que pousser sur une jambe</li>
+                        <li>changer de pied, croiser les mains, attraper une prise au vol…</li>
+                    </ul>
+
+                    <h6>Prendre confiance</h6>
+                    <ul>
+                        <li>Me déplacer avec aisance en hauteur </li>
+                        <li>Me confier à la corde après avoir vérifié que l’assureur m’a pris en charge
+                            (communication)</li>
+                        <li>Ne pas me laisser impressionner par le risque de chute</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module bloc jaune
+                        <img class="img-bloc jaune" src="{{asset('image/passeports/blocJaune.png')}}">
+                    </h4>
+                    <h6>Progresser</h6>
+                    <ul>
+                        <li>Utiliser une prise oblique et aller chercher une prise de main un peu éloignée</li>
+                        <li>Repérer et utiliser des solutions telles que pousser sur une ou deux jambes, changer de
+                            pied ou de main, croiser les mains, attraper une prise au vol</li>
+                    </ul>
+                    <h6>Me proteger</h6>
+                    <ul>
+                        <li>Circuler dans la salle sans passer sous les grimpeurs</li>
+                        <li>Vérifier l’agencement des tapis</li>
+                        <li>Apprécier les hauteurs à ne pas dépasser</li>
+                        <li>Anticiper la manière dont je risque de chuter et vérifier la qualité de la zone de
+                            réception</li>
+                        <li>Demander au moniteur une parade si j’en éprouve le besoin</li>
+                        <li> Privilégier la désescalade, si possible par un itinéraire de descente</li>
+                        <li>Amortir de manière tonique la réception d’un saut et en SAE, enchaîner avec une chute
+                            arrière ou un roulé-boulé</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Orange-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Le passeport orange
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="img-cotation">
+                        <!--Difficulté--><img src="{{asset('image/passeports/diff.png')}}"> 5c
+                        <!--Bloc--><img src="{{asset('image/passeports/bloc.png')}}"> 4c
+                    </div>
+
+                    <h4 class="text-uppercase passeport-orange">J'apprend à</h4>
+                    <p>Renouveler les blocs et les voies, c’est renouveler le plaisir de grimper.</p>
+
+                    <h4 class="text-uppercase">Module sécurité orange</h4>
+
+                    <h6>Adopté une attitude "sécu-compatible"</h6>
+                    <p>Avoir un comportement compatible avec une gestion autonome de la sécurité</p>
+
+                    <h6>Grimper</h6>
+                    <p>Me réceptionner lors d’une chute de faible amplitude (à un point d’assurage suffisamment haut
+                        dans la voie pour bénéficier de l’élasticité de la corde et d’une bonne surface de
+                        réception)</p>
+
+                    <h6>Assurer</h6>
+                    <ul>
+                        <li>Assurer en anticipant les actions du grimpeur (donner et reprendre de la corde en
+                            fonction de ce que va faire le grimpeur) </li>
+                        <li>Freiner et arrêter une chute de façon dynamique</li>
+                        <li> Assurer à deux (avec un frein autobloquant) un grimpeur en vitesse</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module éco-responsabilité orange
+                        <img class="img-eco" src="{{asset('image/passeports/ecoResponsable.png')}}">
+                    </h4>
+                    <ul>
+                        <li>M’échauffer de manière autonome, en augmentant progressivement l’intensité, jusqu’à
+                            atteindre celle que je souhaite mettre en oeuvre pendant ma séance</li>
+                        <li>M’étirer de manière autonome</li>
+                        <li>Maîtriser mes émotions et contrôler mes réactions </li>
+                        <li>Participer au rangement de la salle et du matériel collectif</li>
+                        <li>Toujours, respecter les consignes et les règles</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module difficulté orange
+                        <img class="img-diff" src="{{asset('image/passeports/diffOrange.png')}}">
+                    </h4>
+                    <h6>Progresser</h6>
+                    <ul>
+                        <li>Réaliser des mouvements obligatoires :</li>
+                        <ul>
+                            <li>oppositions sur des prises de main verticales</li>
+                            <li>mouvements d’amplitude</li>
+                            <li>mouvements d’équilibre</li>
+                            <li>adhérences ponctuelles</li>
+                        </ul>
+                        <li>Dans des sections de voies athlétiques :</li>
+                        <ul>
+                            <li>repérer un enchaînement de prises de main lors d’une lecture préalable</li>
+                            <li>grimper relâché et m’économiser en grimpant dès que possible bras tendus, de profil
+                            </li>
+                        </ul>
+                        <li>En moulinette dans des voies faciles, grimper de manière dynamique et fluide, de plus en
+                            plus vite (introduction à la vitesse)</li>
+                    </ul>
+
+                    <h6>Prendre confiance</h6>
+                    <ul>
+                        <li>Réaliser, au niveau des amarrages, des pas difficiles</li>
+                        <li>Dépasser mon appréhension pour accepter de voler dans le mouvement</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module bloc orange
+                        <img class="img-bloc" src="{{asset('image/passeports/blocOrange.png')}}">
+                    </h4>
+                    <h6>Progresser</h6>
+                    <ul>
+                        <li>Dans des passages plus raides :</li>
+                        <ul>
+                            <li>réaliser des oppositions sur des prises de main verticales et des prises de pied
+                                obliques</li>
+                            <li>réaliser des mouvements d’amplitude</li>
+                            <li>gérer des déséquilibres (portes, déséquilibres latéraux)</li>
+                            <li>charger les petites prises de pied</li>
+                            <li>explorer les mouvements dynamiques sans les mains (skate mouv’) et les mouvements
+                                d’équilibre sur volumes</li>
+                        </ul>
+                        <li>Lire avec attention les passages pour trouver la solution, déjouer les pièges, ne pas
+                            m’arrêter au milieu d’un passage athlétique :</li>
+                        <ul>
+                            <li>repérer les prises lors d’une lecture préalable du bloc</li>
+                            <li>chercher les prises cachées si je ne comprends pas la solution</li>
+                            <li>dans un passage très intense , repérer à l’avance une succession de prises de main
+                                cohérente</li>
+                        </ul>
+                    </ul>
+                    <h6>Me proteger</h6>
+                    <ul>
+                        <li>Prévenir les autres de mon essai</li>
+                        <li>Parer un grimpeur quand c’est nécessaire</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--Vert-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    Le passeport vert
+                </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordion-passeport">
+                <div class="accordion-body">
+                    <div class="img-cotation">
+                        <!--Difficulté--><img src="{{asset('image/passeports/diff.png')}}"> 5c
+                        <!--Bloc--><img src="{{asset('image/passeports/bloc.png')}}"> 5a
+                    </div>
+
+                    <h4 class="text-uppercase passeport-vert">J'apprend à</h4>
+                    <p>Pas si facile de grimper en site naturel, mais quel bonheur d’avoir persévéré, de réussir et
+                        de savourer la vue depuis le sommet de la voie !</p>
+
+                    <h4 class="text-uppercase">Module sécurité vert</h4>
+
+                    <h6>Adopté une attitude "sécu-compatible"</h6>
+                    <ul>
+                        <li>Faire preuve d’humilité pour me familiariser à ce nouveau terrain de jeu, mais aussi de
+                            persévérance</li>
+                        <li>Chercher les informations utiles pour ma sécurité dans le topo-guide (difficulté,
+                            hauteur de la voie par rapport à la longueur de ma corde, nombre de dégaines… )</li>
+                        <li>Mesurer l’engagement de la voie et savoir renoncer</li>
+                        <li>Faire un contrôle approfondi de mon matériel avant de commencer</li>
+                        <li>Toujours porter un casque en site naturel</li>
+                    </ul>
+
+                    <h6>Me préparer à grimper</h6>
+                    <ul>
+                        <li>En fonction du cheminement de la voie, placer mes dégaines dans le bon sens</li>
+                        <li>Effectuer la manoeuvre de haut de voie sur maillon rapide pour redescendre en moulinette
+                            en étant toujours assuré</li>
+                        <li>Communiquer avec l’assureur, particulièrement lors de la manoeuvre de haut de voie, mais
+                            aussi lors de la descente pour récupérer les dégaines</li>
+                    </ul>
+
+                    <h6>Assurer</h6>
+                    <ul>
+                        <li>Protéger ma corde de la poussière pendant l’assurage (sac à corde)</li>
+                        <li>À partir du 3ème point, me déplacer éventuellement pour pouvoir suivre la progression du
+                            grimpeur tout en conservant ma stabilité</li>
+                        <li>Ne jamais lâcher la corde ni relâcher mon attention tant que le grimpeur n’est pas de
+                            retour au sol</li>
+                        <li>Communiquer avec le grimpeur</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module éco-responsabilité vert
+                        <img class="img-eco" src="{{asset('image/passeports/ecoResponsable.png')}}">
+                    </h4>
+                    <ul>
+                        <li>Respecter les accès, les propriétés, ainsi que les réglementations d’accès aux sites
+                            naturels d’escalade</li>
+                        <li>Ne laisser aucune trace de mon passage en site naturel (ramasser les déchets…)</li>
+                        <li>Utiliser les topos-guide</li>
+                        <li>Répondre aux besoins du club en fonction de mes capacités (ouverture, encadrement,
+                            organisation, compétition, co-voiturage, etc.)</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module difficulté vert
+                        <img class="img-diff" src="{{asset('image/passeports/diffVert.png')}}">
+                    </h4>
+                    <h6>Progresser</h6>
+                    <ul>
+                        <li>Résoudre les problèmes posés par les exigences spécifiques des sites naturels :</li>
+                        <ul>
+                            <li>utiliser les reliefs inhabituels : fissures, dièdres, écailles, vires</li>
+                            <li>repérer et prendre confiance dans les petits reliefs susceptibles de servir de
+                                prises de pieds</li>
+                            <li>réaliser tous les mouvements de mon répertoire (mouvements d’amplitude, oppositions,
+                                déséquilibres) sur ces petits appuis</li>
+                            <li>dans ce nouveau cadre de référence, repérer les prises, reconnaître les mouvements
+                                et évaluer leurs exigences </li>
+                            <li>repérer le cheminement de la voie, les passages difficiles et la qualité des
+                                surfaces de réception</li>
+                            <li>réaliser des voies faciles très rapidement pour développer ma coordination et gérer
+                                le conflit vitesse/précision (vitesse en moulinette)</li>
+                        </ul>
+                    </ul>
+
+                    <h6>Prendre confiance</h6>
+                    <p>Apprivoiser la hauteur et l’engagement, plus marqués en SNE qu’en SAE, pour pouvoir évoluer
+                        sans stress et me faire plaisir !</p>
+
+                    <h4 class="text-uppercase">Module bloc vert
+                        <img class="img-bloc" src="{{asset('image/passeports/blocVert.png')}}">
+                    </h4>
+                    <h6>Progresser</h6>
+                    <ul>
+                        <li>M’adapter aux exigences des sites de blocs naturels :</li>
+                        <ul>
+                            <li>porter beaucoup d’attention aux reliefs susceptibles de servir de prises de pieds
+                            </li>
+                            <li>prendre confiance dans ces adhérences, grattons et autres bossettes</li>
+                            <li>réaliser tous les mouvements de mon répertoire (mouvements d’amplitude, oppositions,
+                                déséquilibres) sur ces petits appuis</li>
+                            <li>résoudre les problèmes posés par des reliefs inhabituels tels que fissures,
+                                écailles, dièdres, vires… </li>
+                            <li>dans ce nouveau cadre de référence, repérer les prises, reconnaître les mouvements
+                                et évaluer leurs exigences</li>
+                            <li>si je ne comprends pas la solution, repérer les surfaces lisses pouvant servir de
+                                prise</li>
+                        </ul>
+                    </ul>
+                    <h6>Me proteger</h6>
+                    <ul>
+                        <li>Appliquer les mêmes règles de prévention qu’en SAE (s’échauffer, boire, s’étirer…)</li>
+                        <li>Repérer l’itinéraire de descente avant de m’engager</li>
+                        <li>Utiliser et positionner un (ou plusieurs) crash-pad(s), pour la montée, comme pour la
+                            descente</li>
+                        <li>Anticiper la zone de chute et vérifier la qualité de la surface de réception</li>
+                        <li>Parer un partenaire dans un dévers, à faible hauteur du sol</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--Bleu-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                    Le passeport bleu
+                </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordion-passeport">
+                <div class="accordion-body">
+                    <div class="img-cotation">
+                        <!--Difficulté--><img src="{{asset('image/passeports/diff.png')}}"> 6b
+                        <!--Bloc--><img src="{{asset('image/passeports/bloc.png')}}"> 5c
+                    </div>
+
+                    <h4 class="text-uppercase passeport-bleu">J'apprend à</h4>
+                    <p></p>
+
+                    <h4 class="text-uppercase">Module sécurité bleu</h4>
+                    <h6>évaluation en SNE."J’apprends et je répète les manoeuvres de relais et de rappel."</h6>
+                    <p>évaluation en SNE.</p>
+
+                    <h6>Prendre confiance</h6>
+                    <ul>
+                        <li>Remonter au dernier point mousquetonné après une chute en dévers ou surplomb </li>
+                        <li>Récupérer les dégaines en descendant d’une voie déversante ou désaxée (téléphérique)
+                        </li>
+                    </ul>
+
+                    <h6>Assurer ma sécurité</h6>
+                    <ul>
+                        <li>Réaliser la manoeuvre de haut de voie avec dés-encordement puis ré-encordement</li>
+                        <li>Effectuer une manoeuvre de réchappe dans une voie déversante ou surplombante </li>
+                        <li>Si la descente en moulinette présente des frottements importants :</li>
+                        <ul>
+                            <li>installer un relais de haut de voie sur deux points reliés</li>
+                            <li>fermer la cordelette de l’autobloquant par un double noeud de pêcheur</li>
+                            <li>réaliser un machard</li>
+                            <li>installer sur le relais ma corde en double et descendre en rappel auto-assuré</li>
+                            <li>rappeler ma corde dans de bonnes conditions (brins séparés, en limitant les risques
+                                d’accrochage)</li>
+                        </ul>
+                        <li>Installer un relais sur deux points reliés pour faire monter mon partenaire </li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module éco-responsabilité bleu
+                        <img class="img-eco" src="{{asset('image/passeports/ecoResponsable.png')}}">
+                    </h4>
+                    <ul>
+                        <li>Connaître et respecter mes limites pour me préserver</li>
+                        <li>M’investir dans les compétitions officielles en tant que compétiteur et/ou officiel</li>
+                        <li>Réagir correctement en cas d’accident (rassurer, sécuriser, alerter les secours) </li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module difficulté bleu
+                        <img class="img-diff" src="{{asset('image/passeports/diffBleu.png')}}">
+                    </h4>
+                    <p><strong>Evaluation en SNE.</strong></p>
+
+                    <h6>Progresser</h6>
+                    <ul>
+                        <li>Dans les sections raides</li>
+                        <ul>
+                            <li>coordonner la poussée des jambes avec l’action des bras avec le plus de relâchement
+                                possible</li>
+                            <li>m’économiser en grimpant dès que possible bras tendus, de profil… </li>
+                            <li>éviter de m’arrêter dans une situation éprouvante (pour les bras ou les avant-bras)
+                                : repérer une succession de prises de main et les attribuer à chaque main</li>
+                        </ul>
+                        <li>grimper avec détermination entre deux repos</li>
+                        <li>prendre le temps de bien me placer pour mousquetonner rapidement</li>
+                        <li>travailler la rapidité d’exécution des mouvements, lire et mémoriser les passages en
+                            escalade de vitesse</li>
+                    </ul>
+
+                    <h6>Rester confiant</h6>
+                    <ul>
+                        <li>Rester concentré</li>
+                        <li>Ne pas régresser</li>
+                        <li>Me battre dans les voies raides, aux difficultés homogènes mais soutenues</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module bloc bleu
+                        <img class="img-bloc" src="{{asset('image/passeports/blocBleu.png')}}">
+                    </h4>
+                    <h6>Progresser</h6>
+                    <ul>
+                        <li>En extérieur comme en SAE</li>
+                        <ul>
+                            <li>réaliser des mouvements dynamiques (conduits, jetés)</li>
+                            <li>réaliser des mouvements d’amplitude tels que pied-main, bascule sur un genou ...
+                            </li>
+                            <li>gérer des placements délicats (griffé, spatule, crochet, assis-talon)</li>
+                            <li>grimper de manière rythmée dans les enchaînements de mouvements intenses</li>
+                            <li>dans les blocs à méthode, analyser le problème pour imaginer une (ou plusieurs)
+                                solution(s) avant de tenter un essai</li>
+                            <li>grimper à mes limites si les conditions de sécurité sont optimales</li>
+                        </ul>
+                    </ul>
+                    <h6>Me proteger</h6>
+                    <ul>
+                        <li>Placer le (ou les) crash-pad(s) en fonction du lieu le plus probable de chute et le (ou
+                            les) déplacer si besoin</li>
+                        <li>Parer aux épaules</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--Violet-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                    Le passeport violet
+                </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordion-passeport">
+                <div class="accordion-body">
+                    <div class="img-cotation">
+                        <!--Difficulté--><img src="{{asset('image/passeports/diff.png')}}">6c
+                        <!--Bloc--><img src="{{asset('image/passeports/bloc.png')}}">6a
+                    </div>
+
+                    <h4 class="text-uppercase passeport-violet">J'apprend à</h4>
+                    <p></p>
+
+                    <h4 class="text-uppercase">Module éco-responsabilité violet
+                        <img class="img-eco" src="{{asset('image/passeports/ecoResponsable.png')}}">
+                    </h4>
+                    <h6>"Pour mes déchets et ceux des autres, je n’attends pas la journée clean-up" !</h6>
+                    <ul>
+                        <li>Appliquer les gestes "éco-responsables" (choix du moyen de transport, choix
+                            d’équipements recyclables, etc.)</li>
+                        <li>Grimper à mes limites si les conditions de sécurité le permettent</li>
+                        <li>"J’ai participé à au moins une compétition officielle de niveau départemental"</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module difficulté violet
+                        <img class="img-diff" src="{{asset('image/passeports/diffViolet.png')}}">
+                    </h4>
+                    <p><strong>" 6b+, 6c, je viens de franchir un cap ! " </strong></p>
+
+                    <h6>Progresser</h6>
+                    <ul>
+                        <li>Dans les sections raides et soutenues, adopter une stratégie de "fainéant" :</li>
+                        <ul>
+                            <li>grimper relâché, souffler</li>
+                            <li>optimiser les repos pour me reposer et anticiper la suite</li>
+                            <li>entre les repos, ne pas traîner, toujours avancer…</li>
+                        </ul>
+                        <li>Dans les voies "à vue" :</li>
+                        <ul>
+                            <li>grimper assez concentré et déterminé pour</li>
+                            <li>oublier l’engagement</li>
+                            <li>ne pas régresser</li>
+                            <li>ne pas laisser la place au doute</li>
+                        </ul>
+                        <li>Pour travailler une section de voie :</li>
+                        <ul>
+                            <li>optimiser les solutions des passages qui m’ont posé problème</li>
+                            <li>mémoriser emplacements des prises et solutions</li>
+                            <li>grimper concentré et déterminé…</li>
+                        </ul>
+                        <li>Pour me faire plaisir et me lâcher, pratiquer la vitesse</li>
+                        <li>Soutenir la répétition d’efforts importants</li>
+                        <li>"J’ai participé à au moins une compétition officielle de niveau départemental."</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module bloc violet
+                        <img class="img-bloc" src="{{asset('image/passeports/blocViolet.png')}}">
+                    </h4>
+                    <h6>Prendre confiance</h6>
+                    <p>Répéter des bocs difficilement réalisés pour petit à petit banaliser leur difficulté</p>
+                    <h6>Progresser</h6>
+                    <ul>
+                        <li>Réaliser des mouvements qui sortent du schéma classique du "pousser-tirer" : tirer sur
+                            un talon, transformer une prise en appui, réaliser des oppositions complexes, run and
+                            jump…</li>
+                        <li>Produire des efforts très intenses sur de brèves durées</li>
+                        <li>Affiner placements et trajectoires pour dépasser mes limites physiques</li>
+                        <li>Réaliser mes essais concentré, confiant et déterminé</li>
+                    </ul>
+                    <h6>Proteger</h6>
+                    <p>En extérieur, agencer plusieurs crash-pads pour se protéger de réceptions délicates (ou de
+                        chutes de grande hauteur)</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Rouge-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                    Le passeport rouge
+                </button>
+            </h2>
+            <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordion-passeport">
+                <div class="accordion-body">
+                    <div class="img-cotation">
+                        <!--Difficulté--><img src="{{asset('image/passeports/diff.png')}}">7a
+                        <!--Bloc--><img src="{{asset('image/passeports/bloc.png')}}">6b
+                    </div>
+
+                    <h4 class="text-uppercase passeport-rouge">J'apprend à</h4>
+                    <p></p>
+
+                    <h4 class="text-uppercase">Module éco-responsabilité rouge
+                        <img class="img-eco" src="{{asset('image/passeports/ecoResponsable.png')}}">
+                    </h4>
+                    <ul>
+                        <li>Connaître les diverses mesures de protection des sites</li>
+                        <li>Participer à la gestion et à l’entretien des sites</li>
+                        <li>Me donner les moyens de progresser dans tous les styles</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module bloc rouge
+                        <img class="img-diff" src="{{asset('image/passeports/blocRouge.png')}}">
+                    </h4>
+
+                    <h6>Progresser</h6>
+                    <ul>
+                        <li>Réaliser des réponses dans des positions inhabituelles (ex. : corps à l’horizontale)</li>
+                        <li>Réaliser des mouvements aux trajectoires complexes</li>
+                        <li>Utiliser les déséquilibres pour progresser</li>
+                        <li>Sortir du cadre pour trouver la solution</li>
+                        <li>Optimiser les saisies pour développer plus de force</li>
+                        <li>Toujours affiner placements et trajectoires pour dépasser mes limitations physiques</li>
+                        <li>Continuer à charger les pieds malgré de hautes intensités de mouvements</li>
+                        <li>Produire des efforts d’intensité maximale sur quelques mouvements</li>
+                    </ul>
+
+                    <h6>Me proteger</h6>
+                    <p>En extérieur, combiner les moyens pour sécuriser une chute éventuelle en fonction de la
+                        configuration du bloc, de sa hauteur, des mouvements envisagés ou des chutes prévisibles, de la
+                        qualité de la zone de réception et d’obstacles éventuels</p>
+
+                    <h4 class="text-uppercase">Module difficulté rouge
+                        <img class="img-bloc" src="{{asset('image/passeports/diffRouge.png')}}">
+                    </h4>
+                    <p>"J’ai participé à au moins une compétition officielle de niveau régional."</p>
+                    <h6>Progresser</h6>
+                    <ul>
+                        <li>Dans les sections raides et soutenues :</li>
+                        <ul>
+                            <li>rythmer mon escalade</li>
+                            <li>doser mes efforts en me relâchant après les mouvements intenses</li>
+                            <li>récupérer de mes efforts dès que la voie le permet</li>
+                            <li>même au taquet, essayez encore un mouvement, puis un autre…</li>
+                        </ul>
+                        <li>Dans les voies à vue :</li>
+                        <ul>
+                            <li>me réorganiser (ou redescendre vers un repos proche) si mon projet échoue</li>
+                            <li>Soutenir la répétition d’efforts très intenses</li>
+                        </ul>
+                        <li>Pour me faire plaisir et gagner en célérité et explosivité, continuer la vitesse</li>
+                        <li>J’ai réalisé au moins 20 voies du niveau exigé ou supérieur, réparties sur au moins 5 sites
+                            sportifs différents (attestation du club)</li>
+                    </ul>
+                    <h6>Prendre confiance</h6>
+                    <p>Partir dans une voie dans les meilleures conditions possibles (bien échauffé, matériel préparé,
+                        après lecture et visualisation, niveau de tonicité adapté, confiance, concentration et
+                        détermination)</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Noir-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                    Le passeport noir
+                </button>
+            </h2>
+            <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordion-passeport">
+                <div class="accordion-body">
+                    <div class="img-cotation">
+                        <!--Difficulté--><img src="{{asset('image/passeports/diff.png')}}">8a
+                        <!--Bloc--><img src="{{asset('image/passeports/bloc.png')}}">7b
+                    </div>
+
+                    <h4 class="text-uppercase passeport-noir">J'apprend à</h4>
+                    <p></p>
+
+                    <h4 class="text-uppercase">Module bloc noir
+                        <img class="img-bloc" src="{{asset('image/passeports/bloc.png')}}">
+                    </h4>
+                    <ul>
+                        <li>Avoir un niveau de performance en bloc ou être classé dans les 26 premiers.ières du
+                            championnat de France bloc senior</li>
+                        <li>Avoir réalisé 10 blocs du niveau exigé ou supérieur</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module difficulté noir
+                        <img class="img-diff" src="{{asset('image/passeports/diff.png')}}">
+                    </h4>
+                    <ul>
+                        <li>Avoir un niveau de performance en difficulté ou être classé dans les 26 premiers.ières du
+                            championnat de France difficulté senior</li>
+                        <li>Avoir réalisé 10 voies du niveau exigé ou supérieur</li>
+                    </ul>
+
+                    <h4 class="text-uppercase">Module vitesse noir
+                        <img class="img-bloc" src="{{asset('image/passeports/vitesse.png')}}">
+                    </h4>
+                    <ul>
+                        <li>Avoir un niveau de performance en vitesse</li>
+                        <li>Sur la voie du record (15m) d’un temps d’au plus 13,5 secondes pour les femmes ou 11,5
+                            secondes pour les hommes</li>
+                        <li>Ou sur une voie classique de niveau 6b (d‘une hauteur d’au moins 11m) d’une vitesse
+                            supérieure à 0,9m/s pour les femmes ou à 1,1m/s pour les hommes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="text">Pour plus d'informations sur les passeports en escalade, consultez le site web de votre
+        fédération nationale d'escalade.</p>
+</section>
+{% endblock %}

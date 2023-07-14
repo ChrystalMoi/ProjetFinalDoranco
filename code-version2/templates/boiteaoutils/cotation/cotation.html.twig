@@ -1,0 +1,259 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Cotations{% endblock %}
+
+{% block titlePage %}Cotations{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset(css_path) }}">
+{% endblock %}
+
+{% block body %}
+<section class="corps_cotation">
+
+    <p>Les cotations donnent des informations essentielles à connaître avant de se lancer. Les systèmes sont
+        parfois complexes mais avec quelques explications, les 7b+ ou encore les 6a n’auront plus de secrets
+        pour vous !
+    </p>
+
+    <h3>La Cotation en Escalade Libre</h3>
+    <h4>Définition de l’escalade libre</h4>
+    <p>L'escalade libre est une discipline de l'escalade qui consiste à grimper une paroi ou une falaise en
+        utilisant uniquement ses propres capacités physiques, sans l’aide d’aucun équipement artificiel pour
+        faciliter
+        la progression. Cela signifie que le grimpeur utilise principalement ses mains et ses pieds pour se
+        hisser vers le sommet.
+    </p>
+
+    <br>
+
+    <h4>Définition des cotations</h4>
+    <p>Une cotation en escalade est un système de notation utilisé pour évaluer la difficulté d'une voie
+        d'escalade. Elle permet aux grimpeurs de comprendre à quel niveau de difficulté ils se confrontent
+        avant de
+        commencer une ascension. Les cotations sont généralement spécifiques à chaque pays ou région, mais
+        elles partagent
+        certaines similitudes dans leur structure.
+    </p>
+    <p>Le système de cotation le plus couramment utilisé est le système de cotation français. Il utilise des
+        lettres et des chiffres pour décrire la difficulté d’une voie. La cotation française commence par un
+        chiffre, suivi d’une lettre. Concentrons-nous sur les échelles utilisées en France.
+    </p>
+
+    <!--Tableau des cotations-->
+    <div class="container">
+        <table class="table table-centered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>France</th>
+                    <th>État-Unis</th>
+                    <th>Grande-Bretagne</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--1-->
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td>Sentier à plat</td>
+                </tr>
+
+                <!--2-->
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td>Sentier escarpé</td>
+                </tr>
+
+                <!--3-->
+                <tr>
+                    <td>3</td>
+                    <td>5.3</td>
+                    <td></td>
+                    <td>Début d’usage des mains, voies enfants</td>
+                </tr>
+
+                <!--4-->
+                <tr class="cotation4">
+                    <td>4a</td>
+                    <td>5.5</td>
+                    <td></td>
+                    <td rowspan="3">Initiation</td>
+                </tr>
+                <tr class="cotation4">
+                    <td>4b</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="cotation4">
+                    <td>4c</td>
+                    <td>5.6</td>
+                    <td>4b</td>
+                </tr>
+
+                <!--5-->
+                <tr class="cotation5">
+                    <td>5a</td>
+                    <td>5.7</td>
+                    <td>4c</td>
+                    <td rowspan="3">Perfectionnement</td>
+                </tr>
+                <tr class="cotation5">
+                    <td>5b</td>
+                    <td>5.8</td>
+                    <td rowspan="2">5a</td>
+                </tr>
+                <tr class="cotation5">
+                    <td>5c</td>
+                    <td>5.9</td>
+                </tr>
+
+                <!--6-->
+                <tr class="cotation6">
+                    <td>6a</td>
+                    <td>5.10a</td>
+                    <td>5b</td>
+                    <td rowspan="2">Escalade technique, adhérences, petites prises</td>
+                </tr>
+                <tr class="cotation6">
+                    <td>6b</td>
+                    <td></td>
+                    <td rowspan="2">5c</td>
+                </tr>
+                <tr class="cotation6">
+                    <td>6c</td>
+                    <td>5.11b</td>
+                    <td>Premiers devers et surplombs</td>
+                </tr>
+
+                <!--7-->
+                <tr class="cotation7">
+                    <td>7a</td>
+                    <td>5.11d</td>
+                    <td>6a</td>
+                    <td>Escalade physique, parfois en dévers</td>
+                </tr>
+                <tr class="cotation7">
+                    <td>7b</td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="2">Début en compétition</td>
+                </tr>
+                <tr class="cotation7">
+                    <td>7c</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <!--8-->
+                <tr class="cotation8">
+                    <td>8a</td>
+                    <td>5.13b</td>
+                    <td rowspan="2">7a</td>
+                    <td rowspan="3">Haut niveau</td>
+                </tr>
+                <tr class="cotation8">
+                    <td>8b</td>
+                    <td></td>
+                </tr>
+                <tr class="cotation8">
+                    <td>8c</td>
+                    <td>5.14b</td>
+                    <td>7b</td>
+                </tr>
+
+                <!--9-->
+                <tr class="cotation9">
+                    <td>9a</td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="3">Escalade extrême, top niveau mondiale</td>
+                </tr>
+                <tr class="cotation9">
+                    <td>9a+</td>
+                    <td>5.15a</td>
+                    <td>7c</td>
+                </tr>
+                <tr class="cotation9">
+                    <td>9b</td>
+                    <td>5.15b</td>
+                    <td></td>
+                </tr>
+                <tr class="cotation9">
+                    <td>9b+</td>
+                    <td>5.15c</td>
+                    <td></td>
+                    <td>Le plus dur réalisé</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>L’échelle de cotation en escalade va du degré 2 au 9. Symboliquement, on peut imaginer que le degré 0
+        représente un sol parfaitement plat où il est très facile de se déplacer, et le degré 10 représente
+        un plafond parfaitement lisse où il est impossible de progresser, à moins d’avoir des capacités
+        spéciales comme Spider-Man.
+    </p>
+
+    <p>À partir du 4e degré, des sous-cotations sont ajoutées, telles que a, b ou c, pour affiner la
+        difficulté.
+        Parfois, on utilise également des "+" pour indiquer un niveau soutenu sans justifier une cotation
+        supérieure.
+        Par exemple, un 6a+ sera plus difficile qu’un 6a.
+    </p>
+
+    <p>Un grimpeur débutant commence souvent par des voies cotées 4, puis progresse rapidement vers des
+        voies cotées 5a avec un peu de pratique régulière. Les grimpeurs plus réguliers peuvent maîtriser
+        des parois cotées 5c, 6a, 6b, voire 6c.
+    </p>
+
+    <p>À partir du niveau 7, les grimpeurs sont considérés comme confirmés. Le niveau le plus élevé atteint
+        à ce jour est 9b+, réalisé par seulement deux grimpeurs exceptionnels : le jeune tchèque Adam Ondra
+        et la légende américaine Chris Sharma. Maintenant, la communauté de l’escalade est en quête de
+        nouvelles voies cotées 9c.
+    </p>
+
+    <br>
+
+    <h4>L’escalade sportive</h4>
+    <p>En escalade sportive, une ascension est validée lorsque le grimpeur ne s’est pas reposé sur la corde.
+        On dit
+        qu’il a « enchaîné » la voie. Il y a différentes manières d’enchaîner une voie :
+    </p>
+    <ul class="list-group">
+        <li class="list-group-item"><strong>À vue</strong> : le grimpeur n’a pas d’information sur la voie et
+            n’est pas guidé par les autres grimpeurs pendant l’ascension.</li>
+        <li class="list-group-item"><strong>Flash</strong> : le grimpeur a récolté des informations sur la
+            voie et est guidé pendant l’ascension.</li>
+        <li class="list-group-item"><strong>Après travail</strong> : le grimpeur travaille les différents
+            passages de la voie avant de l’enchaîner.</li>
+    </ul>
+
+    <br>
+
+    <h3>La cotation en Bloc</h3>
+    <p>Le bloc est une discipline de l'escalade qui se caractérise par une concentration de difficulté sur
+        une courte distance. La voie à grimper est généralement lue et analysée depuis le sol, car
+        l'objectif est de
+        maximiser l'effort physique et les enchaînements sur quelques mètres. Il est important de bien
+        s'échauffer
+        avant de commencer pour éviter la fatigue prématurée des avant-bras, ce qui est souvent appelé le
+        phénomène
+        des « bouteilles » où vos avant-bras ne répondent plus efficacement.
+    </p>
+    <p>En escalade de bloc, on utilise la même échelle de cotation que pour l'escalade sportive en falaise,
+        mais avec des difficultés plus élevées. Par exemple, un niveau 6a en bloc correspond environ à un
+        niveau 7a en
+        falaise.
+        Cependant, certains sites de bloc ont leur propre système de cotation. Par exemple, à Fontainebleau,
+        un site très connu, on utilise des codes couleurs pour indiquer la difficulté des blocs, tels que le
+        blanc,
+        le jaune, l'orange, le bleu, le rouge et le noir.
+    </p>
+
+</section>
+{% endblock %}

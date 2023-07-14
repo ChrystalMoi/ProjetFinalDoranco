@@ -1,0 +1,45 @@
+<!--Formulaire de connexion-->
+<form class="text-center col-10 mb-3">
+    <div class="card-body">
+        <h2 class="card-title">Connexion</h2>
+        <div class="d-flex mt-2 mb-1 flex-column justify-content-center align-items-center">
+            <div class="col-10">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">@</span>
+                    <div class="form-floating col-8">
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        <label for="email">Adresse email <strong style="color: red">*</strong></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="input-group mb-1">
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-lock-fill" viewBox="0 0 16 16">
+                            <path
+                                    d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                        </svg>
+                    </span>
+                    <div class="form-floating col-8">
+                        <input type="password" class="form-control" id="pwd" placeholder="Mot de passe">
+                        <label for="pwd">Mot de passe <strong style="color: red">*</strong></label>
+                    </div>
+                </div>
+            </div>
+            <div class="text-start col-10 mb-2">
+                <small style="color: red">
+                    <strong>*</strong> Champs requis
+                </small>
+            </div>
+            <div class="alert alert-danger mt-2 mb-2 col-10" id="errorMessage" role="alert" style="display: none">
+                Une erreur est survenue !
+            </div>
+            <button type="submit" class="btn btn-primary col-10 mt-2" id="btn-authent">Se
+                connecter</button>
+            <hr class="col-10">
+            <button type="button" class="btn btn-outline-dark col-10" id="btn-form-creer-compte">Créer un
+                compte</button>
+        </div>
+    </div>
+</form>

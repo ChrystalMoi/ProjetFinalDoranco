@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Mon Compte{% endblock %}
+
+{% block titlePage %}Mon Compte{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset(css_path) }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-3 mb-3">
+        <div class="card">
+            <h3 class="card-header">Informations du compte</h3>
+            <div class="card-body">
+                <div class="d-flex mt-2 mb-1 flex-column justify-content-center align-items-center" id="form-infos-compte">
+                    {# Affichage des informations de l'utilisateur grâce à la page compte/infosCompte.html.twig #}
+                    {% include 'compte/infosCompte.html.twig' %}
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <h3 class="card-header">Commentaires</h3>
+            <div class="card-body">
+                <div class="accordion accordion-flush" id="accordion-commentaires">
+                    {% include 'compte/accordionCommentaires.html.twig' %}                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{asset('js/textareaUtils.js')}}"></script>
+    <script src="{{asset('js/pageMonCompte.js')}}"></script>
+    <script src="{{asset('js/majInfosCompte.js')}}"></script>
+    <script src="{{asset('js/commentaires.js')}}"></script>
+
+{% endblock %}
+

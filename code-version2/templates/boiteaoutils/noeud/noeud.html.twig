@@ -1,0 +1,438 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Noeuds{% endblock %}
+
+{% block titlePage %}Les noeuds{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset(css_path) }}">
+{% endblock %}
+
+{% block body %}
+<section class="corps-noeud">
+    <p>Le nœud d’escalade est un socle vital pour pratiquer cette discipline de plein air. Les nœuds
+        permettent en effet d’assurer la sécurité, et donc la survie des grimpeurs, et de pouvoir se
+        déplacer en toute confiance sur une voie ou une falaise.
+    </p>
+    <p>Avec la multitude de nœuds d’escalade existants, il peut être difficile de savoir lesquels
+        apprendre et lesquels maîtriser, surtout quand on est débutant. Nœud de 8, nœud de cabestan,
+        nœud de chaise, nœud d’arrêt, etc. les nœuds de corde sont très nombreux et savoir réaliser
+        les plus importants est impératif pour garantir une sortie sûre.
+    </p>
+
+    <br>
+
+    <h3 class="mt-3">Les différents type de noeuds</h3>
+
+    <p>Chaque nœud d’escalade possède sa propre utilité et son usage polyvalent ou spécifique.
+        <br><strong>Il existe 3 grands types de nœud d’escalade</strong> :
+    </p>
+
+    <ul>
+        <li><strong>Le nœud d’encordement</strong> (nœud de huit, nœud de chaise)</li>
+        <li><strong>Le nœud d’assurage et de blocage</strong>(nœud de cabestan, demi-cabestan,
+            noeud de Machard, nœud de Prusik)</li>
+        <li><strong>Le nœud de jonction</strong>(nœud de poing, tête d’alouette, nœud de pêcheur
+            double).</li>
+    </ul>
+
+    <p><strong>Le nœud d’encordement</strong> permettent de s’accrocher en toute sécurité, en attachant
+        la corde au baudrier. Premiers nœuds appris en escalade, ils maintiennent le grimpeur en sûreté
+        tout au long de son ascension, l’empêchant de chuter et supportant les chocs. Ils sont aussi appelés
+        nœuds d’arrêt, empêchant la corde de filer dans un trou ou dans une poulie.
+    </p>
+
+    <p><strong>Le nœud d’assurage et de blocage</strong> permettent d’assurer un grimpeur et de contrôler
+        une descente en rappel. En général autobloquants, ils se font la plupart du temps autour d’un objet
+        (mousqueton, corde, etc.).
+    </p>
+
+    <p><strong>Le nœud de jonction</strong>permettent de rabouter (d’attacher) deux cordes entre elles,
+        ce qui peut être très pratique en cas de corde cassée ou si les cordes sont trop courtes pour
+        avancer sur la voie d’escalade choisie. Ils peuvent également permettre de fermer un anneau de
+        corde, de cordelette ou de sangle.
+    </p>
+
+    <br>
+
+    <h3 class="mt-3">Les différents noeuds</h3>
+    <!--https://barooders.com/blogs/infos/guide-noeud-escalade-->
+    <!--https://www.lesnoeuds.com/noeud-29-noeud-en-huit.html (en plus pour une description)-->
+    <div class="accordion accordion-flush" id="accordionNoeud">
+
+        <!--Noeud de 8-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Noeud de 8
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionNoeud">
+                <div class="accordion-body">
+                    <p>Le nœud de 8 est le nœud universel pour s’encorder, premier nœud appris en escalade, permettant
+                        d’attacher une corde à son baudrier et d’être maintenu en cas de chute. Il peut aussi servir à
+                        accrocher des accessoires, comme un walkie-talkie ou une gourde, à l’aide d’une cordelette.
+                    </p>
+
+                    <p>Le nœud de huit est un nœud d’escalade simple, très sûr et facile à réaliser une fois qu’on l’a
+                        bien appris. Il est également facile de vérifier sa bonne confection, même de loin. Le nœud de 8
+                        d’escalade renforce la sécurité du grimpeur, car plus on tire dessus, plus il va se serrer.
+                    </p>
+
+                    <p>Toutefois, c’est un nœud de corde qui peut se desserrer rapidement lorsque la charge est trop
+                        grande. Il peut aussi être très difficile à défaire lorsqu’il est très serré ou après un choc
+                        (une ou plusieurs chutes).
+                    </p>
+
+                    <h4>Comment faire un nœud de huit ?</h4>
+
+                    <ol>
+                        <li>
+                            Prenez 1 m - 1,50 m de corde.
+                        </li>
+                        <li>
+                            Réalisez une boucle.
+                        </li>
+                        <li>
+                            Passez le brin libre (l'extrémité libre de la corde) dans la boucle, dans le sens opposé,
+                            créant un 8.
+                        </li>
+                        <li>
+                            Faites passer le brin libre sur le baudrier ou sur le point à relier, en rapprochant au
+                            maximum le nœud, et repassez dans la boucle.</li>
+                        <li>
+                            Doublez le nœud en suivant le trajet initial une deuxième fois (les deux brins de corde
+                            doivent être parallèles d'un bout à l'autre).
+                        </li>
+                        <li>
+                            Serrez le nœud en 8 en tirant sur chaque brin de corde et vérifiez q'’il est bien serré.
+                        </li>
+                    </ol>
+
+                    <p>
+                        Il est important de suivre ces étapes avec attention pour assurer la sécurité lors de
+                        l'escalade.
+                    </p>
+
+                    <figure>
+                        <img src="{{asset('image/noeud/noeud-de-huit.png')}}" class="image_huit mb-3">
+                        <figcaption><em>Source : Petzl</em></figcaption>
+                    </figure>
+
+                    <p>
+                        Une fois le nœud terminé, il est important de vérifier qu'il reste environ 10 cm de corde après
+                        le nœud pour assurer la sécurité.
+                    </p>
+                    <p>
+                        Le nœud de 8 doit être fait près du pontet (l'anneau de sangle cousu sur le baudrier) pour ne
+                        pas
+                        gêner lors de l'accrochage de la corde à un mousqueton. Il doit être attaché au pontet supérieur
+                        et au pontet inférieur du baudrier, en commençant par le bas. Si vous utilisez un baudrier pour
+                        débutant en salle, passez simplement le nœud de huit dans le pontet unique.
+                    </p>
+                    <p>
+                        Si vous ne nécessitez pas de nœud d'arrêt pour sécuriser le nœud de huit d'escalade, il peut
+                        servir de précaution pour vérifier que le brin courant (la partie de la corde utilisée pour
+                        faire le nœud) n'est pas trop long. Dans ce cas, le nœud d'arrêt doit être placé juste contre le
+                        nœud de huit.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Noeud de Chaise-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Noeud de Chaise
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionNoeud">
+                <div class="accordion-body">
+                    <p>
+                        Le nœud de chaise, aussi appelé nœud de bouline, est un nœud d'attache simple à faire, peu
+                        encombrant et facile à défaire même après une chute. On peut l'utiliser pour installer une corde
+                        d'appui pour se sécuriser près d'un obstacle ou pour attacher une corde à un point d'ancrage
+                        naturel.
+                    </p>
+
+                    <p>
+                        Ce nœud est bien adapté à l'escalade d'une falaise, mais il est déconseillé pour les grandes
+                        voies car il peut se desserrer plus facilement que le nœud de 8, ce qui le rend moins sûr.
+                    </p>
+
+                    <p>
+                        Pour garantir la sécurité du grimpeur, il est nécessaire de faire suivre le nœud de chaise d'un
+                        nœud d'arrêt double collé au nœud. Cela évite qu'il se desserre pendant l'escalade, surtout s'il
+                        n'est pas soumis à une tension constante ou sur une corde neuve.
+                    </p>
+
+                    <p>
+                        Ce nœud est également plus exigeant pour la corde que le nœud de 8, il l'endommage plus
+                        rapidement et est moins facile à contrôler visuellement. C'est pourquoi le nœud de chaise est
+                        généralement réservé aux grimpeurs expérimentés, tandis que les débutants devraient utiliser le
+                        nœud de 8.
+                    </p>
+
+                    <h4>Comment faire un nœud de chaise ?</h4>
+
+                    <ol>
+                        <li>
+                            Passer la corde dans le baudrier (ou point d’encordement) et tirer environ 60 cm – 120 cm de
+                            mou,
+                        </li>
+                        <li>
+                            Réaliser une boucle (aussi appelée ‘‘puits’’ dans ce cas),
+                        </li>
+                        <li>
+                            Faire sortir le brin de corde du puits (en passant par-dessous),
+                        </li>
+                        <li>
+                            Passer le brin derrière l’autre (aussi appelé ‘‘faire le tour de l’arbre’’),
+                        </li>
+                        <li>
+                            Repasser le brin dans le puits
+                        </li>
+                        <li>
+                            Serrer le nœud en tirant fortement sur les deux brins,
+                        </li>
+                        <li>
+                            Réaliser un double nœud d’arrêt pour sécuriser le nœud de chaise.
+                        </li>
+                    </ol>
+
+                    <figure>
+                        <img src="{{asset('image/noeud/noeud-de-chaise.png')}}" class="image_chaise mb-3">
+                        <figcaption><em>Source : barooders.com</em></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <!--Noeud de cabestan-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Noeud de cabestan
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionNoeud">
+                <div class="accordion-body">
+                    <p>
+                        Le nœud de cabestan est un nœud d’assurage pratique utilisé en escalade. Il permet de fixer une
+                        corde à un point d’amarrage, de bloquer la corde facilement et de s'auto-assurer sur un relais.
+                        Il est très utile en grande voie, facile à réaliser et peut être ajusté d'une seule main.
+                    </p>
+                    <p>
+                        Ce nœud d’escalade est idéal pour l'amarrage et le blocage de la corde, car il peut être
+                        rapidement et précisément ajusté. Pour assurer la sécurité, il doit être attaché au relais à
+                        l'aide d'un mousqueton de verrouillage, en particulier un mousqueton HMS qui prévient tout
+                        risque d'ouverture lorsque le nœud est sous tension.
+                    </p>
+
+                    <h4>Comment faire un nœud de cabestan ?</h4>
+
+                    <ol>
+                        <li>
+                            Faire deux boucles, l’une vers l’intérieur, l’autre vers l’extérieur,
+                        </li>
+                        <li>
+                            Superposer les deux boucles en les croisant (la boucle vers l’extérieur passant derrière),
+                        </li>
+                        <li>
+                            Placer les deux boucles dans le mousqueton,
+                        </li>
+                        <li>
+                            Tirer sur les deux brins de la corde pour serrer le nœud,
+                        </li>
+                        <li>
+                            Ne pas oublier de verrouiller le mousqueton.
+                        </li>
+                    </ol>
+
+                    <figure>
+                        <img src="{{asset('image/noeud/noeud-de-cabestan.png')}}" class="image_huit mb-3">
+                        <figcaption><em>Source : Petzl</em></figcaption>
+                    </figure>
+
+                    <p>À noter que le nœud de cabestan peut être confectionné directement sur le mousqueton.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Noeud demi-cabestan-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    Noeud demi-cabestan
+                </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionNoeud">
+                <div class="accordion-body">
+                    <p>
+                        Le demi-cabestan est un nœud d'assurage qui se rapproche davantage d'une boucle que d'un nœud
+                        classique. Il permet à la corde de glisser dans les deux sens, ce qui le rend utile pour assurer
+                        aussi bien lors de l'ascension que de la descente. Il est particulièrement pratique lorsqu'il
+                        s'agit de descendre en rappel avec un partenaire ou une charge, car il permet de gérer le
+                        freinage. En somme, il offre une alternative pratique aux systèmes d'assurage ou de descente
+                        traditionnels.
+                    </p>
+
+                    <h4>Comment faire un nœud de cabestan ?</h4>
+
+                    <ol>
+                        <li>Passer la corde dans le mousqueton,</li>
+                        <li>Effectuer une boucle vers la droite (faire très attention au sens),</li>
+                        <li>Passer cette boucle dans le mousqueton,</li>
+                        <li>Serrer le nœud sur le point fixe,</li>
+                        <li>Ne pas oublier de verrouiller le mousqueton.</li>
+                    </ol>
+
+                    <figure>
+                        <img src="{{asset('image/noeud/noeud-de-demi-cabestan.png')}}" class="image_huit mb-3">
+                        <figcaption><em>Source : Petzl</em></figcaption>
+                    </figure>
+
+                    <p>
+                        Comme le demi-cabestan n’est pas autobloquant, il ne faut jamais lâcher la corde et le bloquer
+                        avec un nœud de mule ou d’arrêt.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Noeud d'arrêt-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                    Noeud d'arrêt
+                </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionNoeud">
+                <div class="accordion-body">
+                    <p>
+                        Le nœud d'arrêt est un nœud utilisé pour sécuriser et empêcher un autre nœud, comme le nœud de
+                        chaise, de se desserrer. Il est également utile pour ajuster la longueur d'une corde en la
+                        reliant à l'autre brin, évitant ainsi les obstacles gênants pour le grimpeur. En général, le
+                        nœud d'arrêt est réalisé en double pour une sécurité renforcée.
+                    </p>
+                    <p>
+                        Pour réaliser un nœud d'arrêt double, c'est simple : il suffit de faire deux tours croisés
+                        autour de la corde avec le brin restant, puis de passer ce brin à l'intérieur et de serrer le
+                        nœud en tirant sur les deux extrémités. Cela permet de maintenir le nœud en place de manière
+                        sûre et fiable.
+                    </p>
+
+                    <h4>Comment faire un nœud d'arret ?</h4>
+
+                    <figure>
+                        <img src="{{asset('image/noeud/noeud-d-arret.png')}}" class="image_huit mb-3">
+                        <figcaption><em>Source : club-grimpons.e-monsite.com</em></figcaption>
+                    </figure>
+
+                    <p>
+                        Pour réaliser un nœud d’arrêt, on peut aussi faire un demi-nœud de pêcheur double
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Noeud de Machard-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                    Noeud de Machard
+                </button>
+            </h2>
+            <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionNoeud">
+                <div class="accordion-body">
+                    <p>
+                        Le nœud de Machard est un nœud d'assurage autobloquant très populaire. Il peut bloquer dans les
+                        deux sens, ce qui le rend idéal pour descendre en rappel en s'auto-assurant. C'est un nœud très
+                        facile à réaliser et à déverrouiller. Pour le faire, on utilise un anneau de cordelette appelé
+                        ficelou, qu'on enroule autour de la corde. Plus on serre le nœud de Machard, plus il bloque
+                        efficacement la corde. Cela garantit une descente sécurisée et contrôlée.
+                    </p>
+
+                    <h4>Comment faire un nœud de Machard ?</h4>
+
+                    <ol>
+                        <li>Prendre le ficelou et l’entourer autour de la corde, avec le nœud vers la droite,</li>
+                        <li>Enrouler le ficelou autour des 2 brins de corde au moins 3 fois, en évitant le chevauchement
+                            des tours,</li>
+                        <li>Passer le nœud et la boucle de la cordelette d’escalade dans un mousqueton de sécurité,</li>
+                        <li>Verrouiller le mousqueton.</li>
+                    </ol>
+
+                    <figure>
+                        <img src="{{asset('image/noeud/noeud-de-machard.png')}}" class="image_huit mb-3">
+                        <figcaption><em>Source : Petzl</em></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <!--Noeuds d'alouette-->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    Noeuds d'alouette
+                </button>
+            </h2>
+            <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionNoeud">
+                <div class="accordion-body">
+                    <p>
+                        La tête d'alouette est un nœud simple utilisé pour relier deux sangles, attacher un anneau de
+                        corde avec une sangle, ou ajouter une sangle d'auto-assurage sur un baudrier ou un mousqueton.
+                        Il est également utilisé comme premier mouvement du nœud de Prusik.
+                    </p>
+                    <p>
+                        Cependant, ce nœud d'alouette présente l'inconvénient d'être fragile et d'affaiblir la corde,
+                        surtout lorsqu'il est chargé et frotté contre la roche de manière répétée. C'est pourquoi la
+                        tête d'alouette est principalement utilisée pour sécuriser du matériel plutôt que pour des
+                        applications impliquant la sécurité personnelle.
+                    </p>
+
+                    <h4>Comment faire un nœud d'alouette ?</h4>
+
+                    <ol>
+                        <li>Réaliser une ganse et la passer autour de l'objet à relier,</li>
+                        <li>Passer les deux brins à travers la ganse,</li>
+                        <li>Serrer.</li>
+                    </ol>
+
+                    <figure>
+                        <img src="{{asset('image/noeud/noeud-d-alouette.png')}}" class="image_huit mb-3">
+                        <figcaption><em>Source : barooders.com</em></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <h3 class="mt-3">L'importance de vérifier ses noeuds d'escalade</h3>
+
+    <p>Nous l’avons vu, les nœuds d’escalade sont très importants lors d’une ascension, permettant
+        d’assurer les membres de la cordée et de réaliser des mouvements de corde. Ayant chacun leur
+        utilité et leur spécificité, <strong>il est donc indispensable de bien les maîtriser avant de
+            vous lancer</strong>. En effet, chaque nœud d’escalade affaiblissant la corde, ils doivent être
+        à chaque fois parfaitement réussis.
+    </p>
+    <p>Les explications données ici ont une vocation éducative, mais ne remplacent pas l’avis et les
+        conseils d’experts. Pensez à vous entraîner à réaliser les différents nœuds présentés et à
+        répéter leur exécution pour vous assurer de les comprendre et de les maîtriser.
+        <strong>En cas de doute, demandez conseil à d’autres grimpeurs, vérifiez la bonne technique du nœud
+            d’escalade avec un grimpeur expérimenté ou suivez des stages de formation.</strong>
+    </p>
+</section>
+{% endblock %}

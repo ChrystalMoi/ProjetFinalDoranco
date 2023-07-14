@@ -1,0 +1,23 @@
+<h2 class="accordion-header">
+    <button class="accordion-button collapsed" id="accordion-button-commentaire-{{commentaire.id}}" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapse-{{commentaire.id}}" aria-expanded="false">
+        {{commentaire.objet|escape}}        
+</h2>
+
+<div id="collapse-{{commentaire.id}}" class="accordion-collapse collapse" data-bs-parent="#accordionCommentaire">
+    <div class="accordion-body">
+        <div class="card-body">
+            <textarea class="form-control mb-3 autoresize" rows="1" id="commentaire-textarea-{{commentaire.id}}">{{commentaire.commentaire|escape}}</textarea>
+
+            <div class="alert alert-danger" role="alert" id="error-message-{{commentaire.id}}" style="display:none"></div>
+
+            <button type="button" class="btn btn-danger" onclick="getCommentaire('{{commentaire.id}}')">
+                Annuler
+            </button>
+
+            <button type="button" class="btn btn-success" onclick="majCommentaire('{{commentaire.id}}')">
+                Enregistrer
+            </button>
+        </div>
+    </div>
+</div>
