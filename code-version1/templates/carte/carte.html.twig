@@ -1,0 +1,51 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Carte{% endblock %}
+
+{% block titlePage %}Carte{% endblock %}
+
+{% block body %}
+    <div id="mapid"></div>
+
+    <script>
+        // Fonction pour effectuer une requête AJAX
+        function getData(url, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    callback(JSON.parse(xhr.responseText));
+                }
+            };
+            xhr.open("GET", url, true);
+            xhr.send();
+        }
+
+        // Appel de la fonction pour récupérer les données du contrôleur
+        getData('{{ path('import') }}', function (data) {
+            var points = data;
+
+            console.log(points);
+
+            // Pour créer la carte et ajouter les marqueurs
+            let mymap = L.map('mapid').setView([46.603354, 1.888334], 6);
+
+            // Ajout de la couche de tuiles OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+                maxZoom: 18
+            }).addTo(mymap);
+
+            // Boucle pour ajouter les marqueurs à la carte
+            points.forEach(function (point) {
+                let name = point.name;
+                let latlng = point.latlng;
+                let codepostal = point.codepostal;
+
+                console.log(latlng);
+
+                L.marker(latlng).addTo(mymap)
+                    .bindPopup("<b>Nom : " + name + "</b> <br>Code postal : " + codepostal + "<br> Latitude : " + latlng[0] + "<br> Longitude : " + latlng[1]);
+            });    
+        });
+    </script>
+{% endblock %}

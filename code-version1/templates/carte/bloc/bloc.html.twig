@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Bloc{% endblock %}
+
+{% block titlePage %}Bloc{% endblock %}
+
+{% block javabody %}
+    {{ parent() }}
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="{{asset('js/bloc.js')}}"></script>
+{% endblock %}
+
+{% block body %}
+    <div id="mapid"></div>
+{% endblock %}
+

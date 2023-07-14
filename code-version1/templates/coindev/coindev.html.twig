@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Le coin développeurs{% endblock %}
+
+{% block titlePage %}Le coin développeurs{% endblock %}
+
+{% block body %}
+    <section class="m-4">
+        <h4>Introduction</h4>
+        <p class="text">Bienvenue sur la page "Coin Développeurs" de mon application. Cette page vise à expliquer mon
+            projet sur Git et à fournir des informations aux développeurs intéressés par la collaboration ou la contribution.</p>
+
+        <h4>Objectifs du Projet</h4>
+        <p class="text">Mon projet sur Git a pour objectif de fournir une plateforme ouverte et collaborative où toute personne
+            intéressée, qu'elle souhaite apporter son aide, explorer le code source ou simplement s'informer, puisse
+            facilement accéder et contribuer à son développement.</p>
+
+        <h4>Git Repository</h4>
+        <p class="text">Le code source de mon projet est hébergé sur Git et est accessible à l'adresse suivante :
+            git@github.com:ChrystalMoi/ProjetFinalDoranco.git.</p>
+
+        <h4>Contribuer</h4>
+        <p class="text">Si vous souhaitez contribuer à mon projet, vous pouvez cloner le dépôt Git, effectuer des modifications et
+            soumettre une demande de fusion (pull request) pour proposer vos changements.</p>
+
+        <h4>Ressources Utiles</h4>
+        <ul>
+            <li><a href="{{asset('document/Dossier_ChrystalBASTID.pdf')}}">Documentation du projet</a></li>
+            <li><a href="https://github.com/ChrystalMoi/ProjetFinalDoranco.git">Dépôt Git</a></li>
+        </ul>
+    </section>
+{% endblock %}

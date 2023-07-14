@@ -1,0 +1,47 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block titlePage %}Contact{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset(css_path) }}">
+{% endblock %}
+
+{% block body %}
+    <section class="corps_contact">
+        {% if success %}
+            <div class="alert alert-success">Merci pour votre avis !</div>
+        {% endif %}
+
+        <h3>Contactez moi par mail :</h3>
+        <p>Si vous souhaitez me contacter via mail, vous pouvez le faire :<a href="mailto:contact@lavoie-escalade.fr"> mon mail</a></p>
+
+        <br>
+
+        <h3>Contactez moi via le formulaire :</h3>
+
+        <form method="post">
+            <div class="form-group mb-2">
+                <label for="inputName">Nom</label>
+                <input type="text" class="form-control" id="inputName" name="name">
+            </div>
+            <div class="form-group mb-2">
+                <label for="inputLastName">Prénom</label>
+                <input type="text" class="form-control" id="inputLastName" name="last_name">
+            </div>
+            <div class="form-group mb-2">
+                <label for="inputEmail">E-mail</label>
+                <input type="email" class="form-control" id="inputEmail" name="email" required>
+            </div>
+            <div class="form-group mb-2">
+                <label for="inputMessage">Message</label>
+                <textarea class="form-control" id="inputMessage" name="message" rows="3"></textarea>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+        </form>
+    </section>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block titlePage %}Accueil{% endblock %}
+
+{% block body %}
+    <section class="jumbotron text-center my-5">
+        <div class="container">
+            <p class="lead">
+                La Voie répertorie certains sites de grimpe en milieu naturel ! Nous répertorions les sites de grimpe en
+                France, ainsi qu'une boîte à outils pour vous aider à mieux comprendre le milieu de l'escalade.
+                Trouvez des sites adaptés à vos besoins et profitez de votre expérience en toute sécurité !
+            </p>
+        </div>
+    </section>
+
+    <!--Cartes-->
+    <section class="light">
+        <div class="container py-2">
+
+            <article class="carte-horizontale light purple">
+                <a class="carte-horizontale__img_link" href="{{asset('carte/carte')}}">
+                    <img class="carte-horizontale__img" src="{{asset('image/accueil/Voie1.jpg')}}"
+                        alt="illustration voie d'escalade" />
+                </a>
+                <div class="carte-horizontale__text texte">
+                    <h1 class="carte-horizontale__title purple">
+                        <a href="{{asset('carte/carte')}}">Carte</a>
+                    </h1>
+
+                    <div class="carte-horizontale__bar"></div>
+
+                    <div class="carte-horizontale__preview-txt">
+                        <a href="{{asset('carte/carte')}}">
+                            Cette carte répertorie les sites de grimpe en plein air pour les amateurs de défis. Chaque
+                            emplacement est accompagné d'une fiche descriptive contenant des informations détaillées sur
+                            les topographies pour vous permettre de tester vos compétences en escalade dans la nature.
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+{% endblock %}

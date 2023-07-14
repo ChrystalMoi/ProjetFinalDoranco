@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block title %}La Voie{% endblock %}</title>
+    <link rel="icon" href="{{asset('image/generale/logo_v.png')}}" type="image/png">
+    {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+    {% block stylesheets %}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">        
+        <link rel="stylesheet" href="{{asset('css/lavoie.css?=5f')}}">
+        <link rel="stylesheet" href="{{asset('js/leaflet/leaflet.css')}}"/>
+    {% endblock %}
+
+    {% block javascripts %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{asset('js/randomBanner.js')}}"></script>
+        <script src="{{asset('js/leaflet/leaflet.js')}}"></script>
+    {% endblock %}    
+</head>
+
+{% block header %}
+    <!--Header-->
+    <header>
+        <!--Barre de navigation - Header-->
+        <!--Possibilité de fixe la barre de navigation avec : fixed-top-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="{{asset('/')}}">
+                    <img src="{{asset('image/generale/logo.png')}}" alt="Bootstrap" width="30" height="auto">
+                    La Voie
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{{asset('/')}}">Accueil</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{asset('carte')}}">Carte</a>                            
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Boite à outils
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="{{asset('boiteaoutils/lexique')}}">Lexique</a></li>
+                                <li><a class="dropdown-item"
+                                        href="{{asset('boiteaoutils/passeport')}}">Les
+                                        passeports</a></li>
+                                <li><a class="dropdown-item" href="{{asset('boiteaoutils/epi')}}">Les
+                                        E.P.I.</a></li>
+                                <li><a class="dropdown-item" href="{{asset('boiteaoutils/noeud')}}">Les
+                                        noeuds</a></li>
+                                <li><a class="dropdown-item"
+                                        href="{{asset('boiteaoutils/cotation')}}">Les cotations</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="{{asset('boiteaoutils/conseil')}}">Conseils
+                                        techniques</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Background image -->
+        <div class="banner">
+            <div class="banner-image">
+                <div class="banner-overlay">
+                    <h1 class="banner-title">{% block titlePage %}La Voie{% endblock %}</h1>
+                </div>
+            </div>
+        </div>
+        <!--Fin Background image -->
+    </header>
+    <!--Fin header-->
+{% endblock %}
+
+<body>
+    {% block body %}{% endblock %}
+</body>
+
+{% block javabody %}{% endblock %}
+
+{% block footer %}
+    <footer class="text-center">
+        <div class="container p-4">
+            <section class="">
+                <div class="row">
+                    <!--Accueil-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="titre-footer">Accueil</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="{{asset('/')}}" class="text-white">Accueil</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--Typographie-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="titre-footer">Carte</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="{{asset('carte/carte')}}" class="police-fond-dark">Carte</a>
+                            </li>                            
+                        </ul>
+                    </div>
+
+                    <!--Boîte à outils-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="titre-footer">Boîte à outils</h5>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-4">
+                                    <a href="{{asset('boiteaoutils/lexique')}}" class="police-fond-dark">Lexique</a>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <a href="{{asset('boiteaoutils/epi')}}" class="police-fond-dark">E.P.I.</a>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <a href="{{asset('boiteaoutils/cotation')}}" class="police-fond-dark">Cotations</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 col-lg-4">
+                                    <a href="{{asset('boiteaoutils/passeport')}}"
+                                        class="police-fond-dark">Passeports</a>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <a href="{{asset('boiteaoutils/noeud')}}" class="police-fond-dark">Noeuds</a>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <a href="{{asset('boiteaoutils/conseil')}}" class="police-fond-dark">Conseils</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Autre-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="titre-footer">Autre</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="{{asset('contact')}}" class="police-fond-dark">Contacts</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('coindev') }}" class="police-fond-dark">Coin développeurs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 my-1 mb-md-0">
+                    <a class="police-fond-dark" href="{{asset('/')}}">lavoie-escalade.fr</a>
+                    |
+                    <a href="{{asset('mentionlegale')}}" class="police-fond-dark">Mentions légales</a>
+                    <p class="text-center">© 2023 La Voie. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Fin -->
+{% endblock %}
+
+<!--Flèche scroll top-->
+<a id="button-up"></a>
+<script src="{{asset('js/scrollTop.js')}}"></script>
+<!--Fin Flèche scroll top-->
+
+</html>
